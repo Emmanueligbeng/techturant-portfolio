@@ -1,3 +1,60 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+    position: relative;
+}
+
+nav .logo a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+nav .nav-left {
+    display: flex;
+    gap: 1rem;
+}
+
+nav .nav-left a {
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+nav .nav-left a:hover {
+    background-color: #555;
+}
+
+.hamburger {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+nav .nav-left.active {
+  display: flex; /* Show the menu when active */
+}
+
+
+
+
+
 html {
   scroll-behavior: smooth;
 }
@@ -109,7 +166,7 @@ nav a:hover{
   }
 
   .connect .project, .connect .connection {
-    background:  #1A1A1A;
+    /* background:  #1A1A1A; */
     color: #fff;
     padding: 0.5rem 1.5rem;
     border-radius: 5px;
@@ -347,37 +404,6 @@ a {
   line-height: 1.3;
 }
 
-/* .port-container {
-  background-color: transparent;
-  border: 1px solid #3B7DF5;
-  height: 5.3rem;
-  display: flex;
-  align-items: center;
-  padding: 0 0.7rem;
-  border-radius: 10px;
-  width: 100%;
-
-}
-
-.port-container .nav {
-  display: flex;
-  justify-content: space-between; 
-  align-items: center;
-  gap: 1rem;
-}
-
-.port-container .nav a {
-  height: 4rem;
-  background-color: #007BFF;
-  color: #fff;
-  padding: 1.5rem 10rem;
-  border-radius: 5px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center; 
-  transition: background-color 0.3s ease;
-} */
 
 .port-container {
   background-color: transparent;
@@ -711,4 +737,550 @@ footer a ,p{
   color: #fff;
   text-decoration: none;
   margin: 0 0.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 480px) {
+  nav .nav-left {
+    display: none; /* Hide navigation links by default */
+    flex-direction: column; /* Stack items vertically */
+    position: absolute;
+    top: 100%; /* Position below the navbar */
+    right: 0;
+    left: 0;
+    background-color: #000413;
+    padding: 1rem 0;
+    z-index: 1000;
+}
+
+nav .nav-left a {
+    text-align: center;
+    padding: 1rem;
+    border-bottom: 1px solid #444;
+}
+
+nav .nav-left a:last-child {
+    border-bottom: none; /* Remove bottom border for last link */
+}
+
+.hamburger {
+    display: flex; /* Show hamburger menu on small screens */
+}
+
+
+
+
+  .hero-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+      text-align: center;
+  }
+
+  .main-left h1 {
+      font-size: 2rem; /* Adjust font size for smaller screens */
+      line-height: 0.8;
+  }
+
+  .main-left p {
+      font-size: 0.9rem;
+      margin: 0;
+  }
+
+  .skills-tips {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin: 15px 0;
+  }
+
+  .skills-tips .container {
+      background-color: #f5f5f5;
+      color: #000;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 0.9rem;
+  }
+
+  .connect {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin: 20px 0;
+  }
+
+  .connect .project a, 
+  .connect .connection a {
+      display: inline-block;
+      padding: 10px 15px;
+      background-color: #3B7DF5;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      width: 100%;
+      text-align: center;
+  }
+
+  .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin: 20px 0;
+  }
+
+  .social-icons .social-container {
+      width: 35px;
+      height: 35px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color:#;
+      color: #fff;
+      border-radius: 50%;
+      font-size: 1.2rem;
+  }
+
+  .main-right dotlottie-player {
+      width: 100%;
+      height: auto;
+      max-width: 350px; /* Adjust the animation size for smaller screens */
+  }
+
+
+
+
+
+
+
+
+  #about {
+    padding: 10px;
+}
+
+.about {
+    text-align: center;
+}
+
+.about-heading {
+    margin-bottom: 20px;
+}
+
+.about-heading h2 {
+    font-size: 1.8rem;
+}
+
+.about-heading p {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+.about-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-left, .about-right {
+    width: 100%;
+}
+
+.about-left h2 {
+    font-size: 1.5rem;
+    line-height: 1.4;
+}
+
+.about-left p {
+    font-size: 0.9rem;
+    margin: 8px 0;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.button-group .btn {
+    font-size: 0.9rem;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.about-right img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.quick-panel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.panel-items {
+    width: 100%;
+    max-width: 300px;
+    background: #f5f5f5;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.panel-items .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.header-left i {
+    font-size: 1.5rem;
+    color: #3B7DF5;
+}
+
+.header-right h1 {
+    font-size: 2rem;
+    color: #fff;
+}
+
+.panel-items p {
+    font-size: 0.9rem;
+    margin: 5px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#portfolio {
+  padding: 10px;
+}
+
+.port-heading {
+  text-align: center;
+  padding: 10px;
+}
+
+.port-heading h2 {
+  font-size: 1.8rem;
+}
+
+.port-heading p {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* .port-container .nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.port-container .nav a {
+  font-size: 0.9rem;
+  padding: 8px 12px;
+} */
+
+
+
+.port-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.port-details-container {
+  width: 100%;
+  max-width: 320px;
+  background: #1A1A1A;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.port-details-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.port-details-container h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.port-details-container p {
+  font-size: 0.9rem;
+  margin: 5px 0 10px 0;
+}
+
+.port-link {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.port-link a {
+  font-size: 0.85rem;
+  padding: 6px 10px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #3B7DF5;
+  border-radius: 5px;
+}
+
+#certification .port-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+#certification .port-details-container img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+#stack {
+  padding: 10px;
+}
+
+.stack-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+}
+
+  .stack-details {
+    flex: 1 0 100%; 
+    max-width: 100%; 
+    text-align: center;
+    box-sizing: border-box;
+    background-color: #1a1a1a76;
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 0.5rem 0; /* Keeps spacing between items */
+  }
+
+.stack-details img {
+  max-width: 80%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.stack-details p {
+  font-size: 0.5rem;
+  font-weight: 500;
+}
+
+.zoom-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.zoom-modal img.zoomed-image {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.zoom-modal .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+#contact {
+  padding: 20px 10px;
+}
+
+#contact .port-heading h2 {
+  font-size: 1.3rem;
+}
+
+#contact .port-heading p {
+  font-size: 0.6rem;
+}
+
+/* Contact form adjustments */
+.contact-main {
+  flex-direction: column;
+  
+}
+
+
+.contact-left,
+.contact-right {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.contact-left h3,
+.contact-right h3 {
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.contact-left p,
+.contact-right p {
+  font-size: 0.6rem;
+  text-align: center;
+}
+
+.contact-left form {
+  padding: 0;
+}
+
+.contact-left .input,
+.contact-left .textarea {
+  width: 100%;
+  margin: 10px 0;
+  font-size: 0.9rem;
+}
+
+.contact-left .btn {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+/* Social icons adjustments */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 0.5rem;
+}
+
+.social-container {
+  font-size: 1.2rem;
+}
+
+/* Testimonies adjustments */
+.test-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.test {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.test-image {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.test-left img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.test-right h4 {
+  font-size: 1rem;
+}
+
+.test-right .rating {
+  font-size: 0.9rem;
+}
+
+.test p {
+  font-size: 0.9rem;
+  margin-top: 5px;
+  text-align: justify;
+}
+
+
+
+
+
+
+
+
+
+footer {
+  width: 100%;
+  /* padding: 10px 20px; */
+  text-align: center;
+  background-color: #010f1e; /* Optional: Adjust the background color */
+  color: #fff; /* Optional: Ensure the text is visible on the background */
+  font-size: 0.6rem; /* Smaller font size for better fit */
+}
+
+footer p {
+  margin: 0;
+  line-height: 1.5;
+}
 }

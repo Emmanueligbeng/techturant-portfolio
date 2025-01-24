@@ -88,3 +88,8 @@ function sendEmail(event) {
           alert("Failed..." + err);
       });
 }
+
+function toggleMenu() {
+  const navLeft = document.querySelector('.nav-left');
+  navLeft.classList.toggle('active');
+}
