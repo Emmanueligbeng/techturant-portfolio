@@ -12,7 +12,6 @@ nav .logo a {
     text-decoration: none;
     color: white;
     font-size: 1.2rem;
-    /* font-weight: bold; */
 }
 nav .logo a:hover{
   color: #fff;
@@ -69,17 +68,30 @@ html {
     margin:0;
 }
 :root{
-    /* color-scheme:light dark; */
-
+  --background-color: linear-gradient(220deg, #010f1e, #000413);
+  --text-color: #fff;
+  --primary-color: #007bff;
 }
+
+/* Dark Mode Styles */
+[data-theme="dark"] {
+  --background-color: #fff;
+  --text-color: #000413;
+  --primary-color: #bb86fc;
+  --secondary-colorr:#1A1A1A;
+}
+
+
 body{
-    /* background-color:light-dark(#fff, #444);
-    color: light-dark(#444, #fff); */
-    /* font-family: Arial, sans-serif; */
     font-family: 'Roboto', sans-serif;
-    background: linear-gradient(220deg, #010f1e, #000413);
+    background: var(--background-color);
     min-height: 100vh; 
-    color: #ffffff;
+    transition: background-color 0.3s, color 0.3s;
+    color: var(--text-color);
+}
+
+a {
+  color: var(--primary-color);
 }
 
 nav{
@@ -717,7 +729,7 @@ footer {
   align-items: center;
   width: 100%;
   bottom: 0;
-  background-color: #01081ea4;
+  background-color: #010f1e;
   color: white;
   padding: 1rem 2.5rem;
   z-index: 1000;
@@ -1247,6 +1259,7 @@ nav .nav-left a:last-child {
   width: 80px;
   height: 80px;
   border-radius: 50%;
+  margin-bottom: 0;
 }
 
 .test-right h4 {
@@ -1273,9 +1286,10 @@ footer {
   width: 100%;
   /* padding: 10px 20px; */
   text-align: center;
-  background-color: #010f1e; /* Optional: Adjust the background color */
+  background-color: #010f1e; 
   color: #fff; /* Optional: Ensure the text is visible on the background */
-  font-size: 0.6rem; /* Smaller font size for better fit */
+  font-size: 0.6rem;
+
 }
 
 footer p {

@@ -93,3 +93,28 @@ function toggleMenu() {
   const navLeft = document.querySelector('.nav-left');
   navLeft.classList.toggle('active');
 }
+
+
+const toggleButton = document.getElementById('theme-toggle-btn');
+const htmlElement = document.documentElement;
+
+// Check for saved theme in localStorage
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme) {
+  htmlElement.setAttribute('data-theme', savedTheme);
+  // Update the button icon based on the saved theme
+  toggleButton.innerHTML = savedTheme === 'dark' ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+}
+
+// Toggle between light and dark mode
+toggleButton.addEventListener('click', () => {
+  const currentTheme = htmlElement.getAttribute('data-theme') || 'light';
+  const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+
+  htmlElement.setAttribute('data-theme', newTheme);
+  localStorage.setItem('theme', newTheme);
+
+  // Update the toggle button icon
+  toggleButton.innerHTML = newTheme === 'dark' ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+});
+
