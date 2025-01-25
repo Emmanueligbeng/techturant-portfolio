@@ -14,6 +14,9 @@ nav .logo a {
     font-size: 1.2rem;
     /* font-weight: bold; */
 }
+nav .logo a:hover{
+  color: #fff;
+}
 
 nav .nav-left {
     display: flex;
@@ -1178,10 +1181,12 @@ nav .nav-left a:last-child {
 .contact-left h3,
 .contact-right h3 {
   font-size: 1.3rem;
+  text-align: center;
 }
 
 .contact-left p,
 .contact-right p {
+  text-align: center;
   font-size: 0.9rem;
 }
 
@@ -1255,6 +1260,7 @@ nav .nav-left a:last-child {
 
 .test p {
   font-size: 0.9rem;
+  font-style: italic;
 }
 
 
