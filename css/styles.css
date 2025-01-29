@@ -37,17 +37,7 @@ nav .nav-left a:hover {
 
 .hamburger {
     display: none;
-    flex-direction: column;
-    gap: 4px;
-    cursor: pointer;
-}
-
-.hamburger span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    border-radius: 2px;
+    gap: 8px;
 }
 
 nav .nav-left.active {
@@ -81,6 +71,18 @@ html {
   --secondary-colorr:#1A1A1A;
 }
 
+#theme-toggle-btn {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 5px; 
+}
+
+#theme-toggle-btn i {
+  font-size: 1.2rem; /* Adjust icon size if needed */
+  color: #fff;
+}
 
 body{
     font-family: 'Roboto', sans-serif;
@@ -107,7 +109,13 @@ nav{
     z-index: 1000;
 }
 main{
-    margin: 3% 5%;
+    margin: 0.9% 5%;
+}
+
+.main-right dotlottie-player {
+  max-width: 100%;
+  height: auto; 
+  display: block;
 }
 
 .logo img {
@@ -133,21 +141,32 @@ nav a:hover{
   .nav-left a {
     text-decoration: none;         
     color: #fff;                   
-    /* font-weight: bold; */
     transition: color 0.3s ease;   
   }
 
   .nav-left a:active{
-    border-bottom: 2px solid #3B7DF5; 
+    /* border-bottom: 2px solid #3B7DF5;  */
     color:#3B7DF5;
   }
 
   .hero-section{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; /* Vertically align items */
+    padding: 25px;
     
   }
+
+.main-left {
+  flex: 1;
+  padding-right: 50px;
+}
+
+.main-right {
+  flex: 1;
+  text-align: center; 
+  }
+
   .hero-section h1 {
     font-size: 3rem; 
     font-weight: bold;
@@ -735,9 +754,7 @@ footer {
   z-index: 1000;
   text-align: center;
 }
-/* #stack{
-  width: 100%; */
-}
+
 footer a ,p{
   font-size: 0.9rem;
   color: #fff;
@@ -789,7 +806,8 @@ nav .nav-left a:last-child {
 }
 
 .hamburger {
-    display: flex; /* Show hamburger menu on small screens */
+    display: flex;
+    align-items: center;
 }
 
 
@@ -870,6 +888,7 @@ nav .nav-left a:last-child {
 
   .main-right dotlottie-player {
       width: 100%;
+      /* display: block; */
       height: auto;
       max-width: 350px; /* Adjust the animation size for smaller screens */
   }
@@ -1264,11 +1283,15 @@ nav .nav-left a:last-child {
 
 .test-right h4 {
   font-size: 1.1rem;
-  margin: 0.5rem 0;
+  /* margin: 0.5rem 0; */
 }
 
 .rating {
   font-size: 1rem;
+  display: flex;
+  justify-content: center; /* Center align stars */
+  gap: 3px; 
+  margin-top: 5px;
 }
 
 .test p {
@@ -1284,7 +1307,6 @@ nav .nav-left a:last-child {
 
 footer {
   width: 100%;
-  /* padding: 10px 20px; */
   text-align: center;
   background-color: #010f1e; 
   color: #fff; /* Optional: Ensure the text is visible on the background */
