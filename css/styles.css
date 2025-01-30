@@ -60,14 +60,14 @@ html {
 :root{
   --background-color: linear-gradient(220deg, #010f1e, #000413);
   --text-color: #fff;
-  --primary-color: #007bff;
+  --primary-color: #021f3d88;
 }
 
 /* Dark Mode Styles */
 [data-theme="dark"] {
   --background-color: #fff;
   --text-color: #000413;
-  --primary-color: #bb86fc;
+  --primary-color: #1b2835b8;
   --secondary-colorr:#1A1A1A;
 }
 
@@ -162,6 +162,10 @@ nav a:hover{
   padding-right: 50px;
 }
 
+.main-left p{
+  color: var(--secondary-colorr);
+}
+
 .main-right {
   flex: 1;
   text-align: center; 
@@ -182,8 +186,8 @@ nav a:hover{
   }
   .skills-tips {
     display: flex;
-    gap: 1rem;
-    margin: 1rem 0;
+    gap: 0.8rem;
+    margin: 0.8rem 0;
   }
 
   .skills-tips .container {
@@ -191,7 +195,7 @@ nav a:hover{
     background: transparent;
     border-radius: 15px;
     border: 1px solid #3B7DF5;
-    color: #fff;
+    color: var(--secondary-colorr);
   }
 
   .connect {
@@ -242,7 +246,6 @@ nav a:hover{
 
   .social-icons {
     display: flex;
-    /* justify-content: center; */
     gap: 15px;
     margin-top: 15px;
 }
@@ -261,6 +264,7 @@ nav a:hover{
 .social-container i {
     font-size: 17px;
     transition: color 0.3s ease;
+    color: whitesmoke;
 }
 
 a {
@@ -286,6 +290,10 @@ a {
   margin: 2% 0 0.5% 0;
 }
 
+.about-heading p{
+  color: var(--secondary-colorr);
+}
+
 .about-main{
   display: flex;
   justify-content: space-between;
@@ -303,6 +311,7 @@ a {
   margin: 0.4rem 0;
   line-height:1.8;
   text-transform: capitalize;
+  color: var(--secondary-colorr);
 }
 
 .about-right img{
@@ -312,7 +321,7 @@ a {
   height: 350px;
   border-radius: 50%; 
   object-fit: cover; 
-  border: 5px solid #3B7DF5;
+  border: 3px solid #3B7DF5;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
   transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
@@ -363,6 +372,7 @@ a {
 .view-projects {
   background-color:transparent;
   border: 1px solid #3B7DF5;
+  color: var(--secondary-colorr);
 }
 
 .view-projects:hover {
@@ -376,13 +386,13 @@ a {
 }
 
 .quick-panel .panel-items{
-  background-color: #010f1e;
+  background-color:#1a1a1a76;
 }
 
 .panel-items {
   padding: 1.5rem;
   border-radius: 10px;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 .panel-items p{
   margin: 8px;
@@ -403,7 +413,7 @@ a {
 
 .header-left i {
   font-size: 1rem; 
-  color: #fff;
+  color:#fff;
 }
 
 .header-right h1 {
@@ -423,7 +433,7 @@ a {
 }
 
 .port-heading{ 
-  margin: 5%;
+  margin: 3%;
   text-align: center;
 
 }
@@ -436,31 +446,30 @@ a {
 .port-heading p{
   text-transform: capitalize;
   line-height: 1.3;
+  color: var(--text-color);
 }
 
 .port-container {
-  /* background-color: transparent; */
-  padding: 1rem; /* Adds spacing around the container */
-  border-radius: 8px; /* Smooth corners */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  padding: 1rem; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   
 }
 
 .port-container .nav {
-  display: flex; /* Flexbox for alignment */
-  justify-content: center; /* Center the navigation items */
-  gap: 1.5rem; /* Space between navigation items */
-  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  display: flex; 
+  justify-content: center; 
+  gap: 1.5rem; 
+  flex-wrap: wrap; 
 }
 
 .port-container .nav a {
-  color: #fff; /* White text for visibility */
+  color: var(--text-color);   
   text-decoration: none; /* Removes underline */
-  font-size: 1rem; /* Adjust font size */
-  font-weight: bold; /* Make text bold */
-  padding: 0.5rem 1rem; /* Add padding for clickable area */
-  border-radius: 5px; /* Smooth corners for links */
-  transition: all 0.3s ease; /* Smooth hover effect */
+  font-size: 1rem; 
+  padding: 0.5rem 1rem; 
+  border-radius: 5px; 
+  transition: all 0.3s ease; 
 }
 
 .port-container .nav a:hover {
@@ -469,7 +478,7 @@ a {
 }
 
 .port-container .nav a.active {
-  background-color: #1A73E8; /* Active link color */
+  background-color: #1A73E8; 
   color: #fff;
 }
 
@@ -479,11 +488,11 @@ a {
   gap: 2rem;
   padding: 20px;
   max-width: 1200px;
-  margin: 0 auto; /* Center the grid on the page */
+  margin: 0 auto; 
 }
 
 .port-details-container {
-  background-color:#010f1e; 
+  background-color:#1a1a1a76; 
   border-radius: 10px; 
   padding: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
@@ -664,6 +673,7 @@ a {
   text-transform: capitalize;
   margin: 5px 0;
   line-height: 1.5;
+  color: var(--text-color);
 }
 
 .contact-main .contact-right{
@@ -749,10 +759,11 @@ footer {
   width: 100%;
   bottom: 0;
   background-color: #010f1e;
-  color: white;
+  color:var(--text-color);
   padding: 1rem 2.5rem;
   z-index: 1000;
   text-align: center;
+  margin-top: 3%;
 }
 
 footer a ,p{
