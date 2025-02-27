@@ -876,7 +876,6 @@ nav .nav-left a:last-child {
       display: flex;
       justify-content: center;
       align-items: center;
-      /* background-color:#; */
       color: #fff;
       border-radius: 50%;
       font-size: 1.2rem;
@@ -886,7 +885,7 @@ nav .nav-left a:last-child {
       width: 100%;
       display: block;
       height: auto;
-      max-width: 460px; /* Adjust the animation size for smaller screens */
+      max-width: 430px; /* Adjust the animation size for smaller screens */
   }
 
 
