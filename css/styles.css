@@ -44,10 +44,6 @@ nav .nav-left.active {
   display: flex;
 }
 
-
-
-
-
 html {
   scroll-behavior: smooth;
 }
@@ -103,7 +99,8 @@ nav{
     position: sticky;
     width: 100%;
     top: 0;
-    background-color: #010f1e;
+    background-color: rgba(1, 15, 30, 0.2);
+    backdrop-filter: blur(10px);
     color: white;
     padding: 1rem 2.5rem;
     z-index: 1000;
@@ -154,22 +151,14 @@ nav a:hover{
     justify-content: space-between;
     align-items: center; /* Vertically align items */
     padding: 25px;
+    width: 100%;
     
   }
-
-.main-left {
-  flex: 1;
-  padding-right: 50px;
-}
 
 .main-left p{
   color: var(--secondary-colorr);
 }
 
-.main-right {
-  flex: 1;
-  text-align: center; 
-  }
 
   .hero-section h1 {
     font-size: 3rem; 
@@ -221,11 +210,7 @@ nav a:hover{
     background-color: #3B7DF5;
   }
 
-  .main-right img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-  }
+
 
    .typing-effect {
     display: inline-block;
@@ -813,7 +798,7 @@ nav .nav-left a {
 }
 
 nav .nav-left a:last-child {
-    border-bottom: none; /* Remove bottom border for last link */
+    border-bottom: none; 
 }
 
 .hamburger {
@@ -852,7 +837,7 @@ nav .nav-left a:last-child {
 
   .skills-tips .container {
       background-color: transparent;
-      color: #fff;
+      color: var(--text-color);
       padding: 5px 10px;
       border-radius: 5px;
       font-size: 0.8rem;
@@ -899,9 +884,9 @@ nav .nav-left a:last-child {
 
   .main-right dotlottie-player {
       width: 100%;
-      /* display: block; */
+      display: block;
       height: auto;
-      max-width: 350px; /* Adjust the animation size for smaller screens */
+      max-width: 460px; /* Adjust the animation size for smaller screens */
   }
 
 
@@ -1072,7 +1057,8 @@ nav .nav-left a:last-child {
 .port-details-container {
   width: 100%;
   max-width: 320px;
-  background: #1A1A1A;
+  /* background: #1A1A1A; */
+  background-color: var(--primary-color);
   border-radius: 8px;
   padding: 10px;
   text-align: center;
